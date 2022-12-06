@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bài 2 - phiếu số 1</title>
+        <meta charset="utf-8">
+        <style>
+            * {
+                margin: 5px 2px 1px 5px ;
+            }
+            div {
+                width: 200px;
+                height: 20px;
+                background-color: bisque;
+                border: 1px solid black;
+                line-height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span id="input"></span>
+        </div>
+        <button onclick="bam(1)">1</button>
+        <button onclick="bam(2)">2</button>
+        <button onclick="bam(3)">3</button>
+        <button onclick="bam(4)">4</button>
+        <button onclick="bam(5)">5</button>
+        <button onclick="cong()">+</button>
+        <br>
+        <button onclick="bam(6)">6</button>
+        <button onclick="bam(7)">7</button>
+        <button onclick="bam(8)">8</button>
+        <button onclick="bam(9)">9</button>
+        <button onclick="bam(0)">0</button>
+        <button onclick="result()">=</button>
+        <script>
+            var sum=0, a=0;
+            function bam(x) {
+                a = x;
+                document.getElementById("input").textContent = a;
+            }
+            function cong() {
+                document.getElementById("input").textContent = "+";
+                sum += a;
+                return sum;
+            }
+            function result() {
+                var kq = document.getElementById("input");
+                kq.textContent = sum + a;
+                sum = 0;
+                a = 0;
+            }
+        </script>
+    </body>
+</html>

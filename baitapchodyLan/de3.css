@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container{
+    margin: 0 auto;
+    width: 1320px;
+}
+
+header{
+    height: 100px;
+}
+header img{
+    width: 1320px;
+    height: 100px;
+}
+
+nav ul{
+    height: 70px;
+    background-color: #00a69b;
+    margin-top: 30px;
+}
+nav ul li {
+    height: 50px;
+    border-left: 2px dotted blue;
+    list-style: none;
+    float: left;
+    width: 150px;
+    margin-top: 20px;
+    text-align: center;
+}
+nav ul li a {
+    color: rgb(145, 8, 8);
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 50px;
+}
+nav ul li:hover{
+    background-color: #5f5c5c;
+}
+.cha{
+    position: relative;
+}
+.cha .con{
+    position: absolute;
+    left: 0;
+    top: 20px;
+    display: none;
+}
+.cha .con li {
+    border: none;
+    height: 40px;
+    width: 180px;
+    background-color: #00a69b;
+    margin: 0;
+    padding: 0;
+    list-style-type: circle;
+    list-style-position: inside;
+    text-align: left;
+    padding-left: 30px;
+    border-bottom: 2px dotted blue;
+}
+.cha .con li a{
+    font-size: 16px;
+    padding-left: 15px;
+}
+.cha:hover .con{
+    display: block;
+}
+.cha .con li:hover{
+    background-color: #5f5c5c;
+}
+section{
+    color: #004080;
+    display: flex;
+    margin-top: 60px;
+}
+.tusach{
+    width: 300px;
+    line-height: 30px;
+    margin-left: 20px;
+}
+.cay{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+}
+.cay .caycon{
+    display: flex;
+}
+.cay .caycon img{
+    width: 250px;
+    height: 200px;
+    margin-top: 30px;
+}
+.cay .caycon .content{
+    width: 600px;
+    margin-left: 20px;
+    line-height: 30px;
+}
+
+footer{
+    color: #004080;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    background-color: black;
+    margin-top: 50px;
+}

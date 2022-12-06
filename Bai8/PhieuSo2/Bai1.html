@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <h1>Chào mừng đến với trang web</h1>
+    <h1>Vui lòng mở F12</h1>
+    <script>
+        let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+        let name = ["th", "st", "nd", "rd"]
+        for (let i = 0; i < color.length; i++) {
+            if (i < 3) {
+                console.log(i + 1, name[i + 1], 'choice is', color[i]);
+            }
+            else {
+                console.log(i + 1, name[0], 'choice is', color[i]);
+            }
+        }
+    </script>
+</body>
+
+</html>

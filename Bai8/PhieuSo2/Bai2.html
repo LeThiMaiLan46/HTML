@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+
+<body>
+    <h1>Chào mừng đến với trang web</h1>
+    <h1>Vui lòng mở F12</h1>
+    <script>
+        let input = prompt('Nhập vào chuỗi');
+        console.log('Chuỗi vừa nhập: ', input);
+        function checkHvsA(input) {
+            let countH = 0, countA = 0;
+            for (let i = 0; i < input.length; i++) {
+                if (input[i] == 'h') countH++;
+                if (input[i] == 'a') countA++;
+            }
+            if (countH == countA) console.log("Số lần xuất hiện của 'h' = số lần xuất hiện của 'a'");
+            else console.log("Số lần xuất hiện của 'h' khác số lần xuất hiện của 'a'");
+        }
+        checkHvsA(input);
+    </script>
+</body>
+
+</html>

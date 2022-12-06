@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bài 3 - phiếu số 2</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                list-style: none;
+            }
+            .navbar {
+                display: flex;
+            }
+            .navbar > li {
+                position: relative;
+                color: white;
+                background-color: blue;
+                padding: 15px 20px;
+            }
+            .navbar > li:hover {
+                background-color: red;
+            }
+            .navbar > li:hover > div {
+                display: block;
+            }
+            .navbar > li > div {
+                position: absolute;
+                display: none;
+                left: -182px;
+            }
+            .navbar-con {
+                display: flex;
+            }
+            .navbar-con > li {
+                margin-top: 15px;
+                padding: 15px 10px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul class="navbar">
+                <li>Chính trị-xã hội</li>
+                <li>
+                    Thế giới
+                    <div>
+                        <ul class="navbar-con">
+                            <li style="width: 130px;">Thư viện pháp luật</li>
+                            <li style="width: 70px;">Sống khỏe</li>
+                            <li style="width: 70px;">Pháp luật</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Nhịp sống trẻ</li>
+                <li>Giáo dục</li>
+                <li>Kinh tế</li>
+            </ul>
+        </div>
+    </body>
+</html>

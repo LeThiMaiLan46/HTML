@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#container {
+    width: 100%;
+}
+
+header img {
+    height: 120px;
+    width: 100%;
+}
+
+nav .menu ul {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+nav .menu ul li {
+    line-height: 50px;
+    background-color: rgb(10, 151, 104);
+    height: 50px;
+    border-right: 2px dotted blue;
+    width: 150px;
+    text-align: center;
+    list-style: none;
+}
+nav .menu ul > li > a {
+    color: brown;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav .menu ul li:hover {
+    background-color: antiquewhite;
+}
+.cha {
+    position: relative;
+}
+.cha .con {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    margin: 0;
+}
+.cha .con li {
+    height: 45px;
+    width: 200px;
+    border: none;
+    line-height: 45px;
+    list-style-type: circle;
+    list-style-position: inside;
+    text-align: justify;
+    padding-left: 15px;
+}
+.cha .con li a {
+    font-size: 15px;
+    border-bottom: 2px dotted black;
+    padding-bottom: 11px;
+}
+.cha:hover .con {
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 1000px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+article .list {
+    width: 250px;
+    margin-left: 20px;
+}
+article .list h3 {
+    padding-bottom: 10px;
+}
+article .list ul {
+    margin-left: 50px;
+}
+article .list ul li {
+    line-height: 30px;
+}
+article .anh {
+    width: 300px;
+}
+article .anh img {
+    width: 300px;
+    height: 300px;
+}
+article .content {
+    width: 400px;
+}
+article .content p {
+    word-spacing: 4px;
+}

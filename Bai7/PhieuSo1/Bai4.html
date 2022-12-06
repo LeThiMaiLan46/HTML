@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+    <style>
+        #app {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .pheptinh {
+            margin: 20px 0 20px 100px;
+        }
+
+        button.phep.active {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <label for="number1">Số thức nhất: </label>
+        <input type="text" id="number1" name="number1" value="0">
+        <div class="pheptinh">
+            <button class="phep" value="+" onclick="onClick(this)">+</button>
+            <button class="phep" value="-" onclick="onClick(this)">-</button>
+            <button class="phep" value="*" onclick="onClick(this)">*</button>
+            <button class="phep" value="/" onclick="onClick(this)">/</button>
+            <button class="phep" value="^" onclick="onClick(this)">^</button>
+        </div>
+        <label for="number2">Số thức hai: </label>
+        <input type="text" id="number2" name="number2" value="0">
+        <div class="pheptinh">
+            <button class="submit" onclick="subMit()">=</button>
+        </div>
+        <label for="submit">Kết quả: </label>
+        <input type="text" id="submit" name="submit" value="0">
+        <script>
+            const list = document.getElementsByClassName('phep');
+            let phep = '';
+            function onClick(obj) {
+                for (let phep of list) {
+                    phep.classList.remove('active');
+                }
+                phep = obj.value;
+                obj.classList.add('active');
+            }
+            function subMit() {
+                let number1 = +(document.getElementById('number1').value);
+                let number2 = +(document.getElementById('number2').value);
+                let ketqua = 0;
+                switch (phep) {
+                    case '+':
+                        ketqua = number1 + number2;
+                        break;
+                    case '-':
+                        ketqua = number1 - number2;
+                        break;
+                    case '*':
+                        ketqua = number1 * number2;
+                        break;
+                    case '/':
+                        ketqua = number1 / number2;
+                        break;
+                    case '^':
+                        ketqua = Math.pow(number1, number2);
+                        break;
+                    default:
+                        alert('Chọn phép tính');
+                }
+                document.getElementById('submit').value = ketqua;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

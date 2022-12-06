@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+
+<body>
+    <h1>Chào mừng đến với trang web</h1>
+    <h1>Vui lòng mở F12</h1>
+    <script>
+        let input = prompt('Nhập vào chuỗi');
+        console.log('Chuỗi vừa nhập: ', input);
+        function Reverse(input) {
+            let result = "";
+            for (let i = input.length - 1; i >= 0; i--) {
+                result += input[i];
+            }
+            return result;
+        }
+        console.log('Chuỗi vừa đảo ngược: ', Reverse(input));
+    </script>
+</body>
+
+</html>

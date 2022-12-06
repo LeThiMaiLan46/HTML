@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+
+<body>
+    <h1>Chào mừng đến với trang web</h1>
+    <h1>Vui lòng mở F12</h1>
+    <script>
+        let input1 = prompt('Nhập vào chuỗi 1');
+        console.log('Chuỗi vừa nhập:', input1);
+        let input2 = prompt('Nhập vào chuỗi 2');
+        console.log('Chuỗi vừa nhập:', input2);
+        function different(input1, input2) {
+            if (input1.length != input2.length) return false;
+            let arr1 = input1.split('');
+            let arr2 = input2.split('');
+            arr1.sort();
+            arr2.sort();
+            let check = true;
+            for (let i = 1; i < arr1.length; i++) {
+                if (arr1[i] != arr2[i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        if (different(input1, input2)) {
+            console.log('Có thể sắp xếp các ký tự để chuỗi 1 thành chuỗi 2');
+        }
+        else {
+            console.log('Không thể sắp xếp các ký tự để chuỗi 1 thành chuỗi 2');
+        }
+    </script>
+</body>
+
+</html>

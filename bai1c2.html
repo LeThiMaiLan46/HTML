@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ví dụ về javascript</title>
+<meta charset="utf-8">
+	
+</head>
+<body>
+Ngày tháng năm sinh: <select id="ngay"></select>	
+Tháng:<select id="thang"></select>
+Năm:<select id="nam"></select>
+	<script>
+		function createOption(st,ed,sel){
+			var index;
+			for(index=st;index<=ed;index++){
+				var opt = document.createElement("option");
+				opt.value = index;
+				opt.text = index;
+				sel.add(opt);
+			}
+		}
+		var selDate = document.getElementById("ngay");
+		createOption(1,31,selDate);
+		var selMonth = document.getElementById("thang");
+		createOption(1,12,selMonth);
+		var cd = new Date();
+		var cy = cd.getFullYear();
+		var selYear = document.getElementById("nam");
+		createOption(1900,cy,selYear);
+	</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bài 6 - phiếu số 2</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                margin: 0;
+            }
+            .header {
+                height: 200px;
+                width: 100%;
+                display: flex;
+            }
+            .header > img {
+                flex: 1;
+            }
+            .navbar {
+                list-style: none;
+                display: flex;
+                height: 60px;
+            }
+            .navbar > li {
+                background-color: rgb(62, 170, 134);
+                color: brown;
+                width: 100px;
+                line-height: 60px;
+                padding: 0 20px;
+                text-align: center;
+                border-right: 1px dotted blue;
+                position: relative;
+            }
+            .navbar > li:hover {
+                background-color: rgb(88, 73, 63);
+            }
+            .navbar > li:active > div {
+                display: block
+            }
+            .navbar > li > div {
+                display: none;
+                position: absolute;
+                left: 0;
+            }
+            .navbar-con > li {
+                height: 40px;
+                width: 200px;
+                background-color: rgb(62, 170, 134);
+                list-style-position: inside;
+                text-align: center;
+                padding-bottom: 10px;
+                text-decoration: dotted underline black;
+                text-underline-offset: 13px;
+            }
+            .content {
+                margin-left: 40px;
+                margin-top: 40px; 
+                display: flex;
+                position: relative;
+                float: left;
+            }
+            .tusach > li {
+                line-height: 20px;
+                font-size: 20px;
+            }
+            .anh {
+                position: absolute;
+                left: 200px;
+            }
+            .anh > img {
+                width: 300px;
+                height: 300px;
+            }
+            .doanvan > p {
+                width: 300px;
+                height: 500px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <header>
+                <div class="header">
+                    <img src="anh1.png" alt="Truyện ngắn">
+                </div>
+            </header>
+            <section>
+                <nav>
+                    <div>
+                        <ul class="navbar">
+                            <li>Trang chủ</li>
+                            <li>TruyệnBlog</li>
+                            <li>
+                                Truyện ngắn
+                                <div>
+                                    <ul class="navbar-con">
+                                        <li>Truyện ngắn về tình yêu</li>
+                                        <li>Truyện ngắn về gia đình</li>
+                                        <li>Truyện ngắn về bạn bè</li>
+                                        <li>Truyện ngắn về đời sống</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>Sách hay</li>
+                            <li>Tâm sự</li>
+                            <li>Tiểu thuyết</li>
+                            <li>Tin tức</li>
+                            <li>Truyện cười</li>
+                            <li>Liên hệ</li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="content">
+                    <div class="tusach">
+                        <h1>Tủ sách</h1>
+                        <ul>
+                            <li>Truyện nổi bật</li>
+                            <li>Truyện mới</li>
+                            <li>Tiểu thuyết mới</li>
+                            <li>Truyện kiếm hiệp mới</li>
+                            <li>Truyện khoa học viễn tưởng</li>
+                            <li>Truyện trinh thám</li>
+                            <li>Góc cười</li>
+                            <li>Góc tâm sự</li>
+                        </ul>
+                    </div>
+                    <div class="anh">
+                        <img src="anh2.png" alt="Tôi thấy hoa vàng trên cỏ xanh">
+                    </div>
+                    <!-- <div id="doanvan">
+                        “Tôi thấy hoa vàng trên cỏ xanh” – một quyển truyện kể về những giai đoạn mà đời người ai cũng từng trải qua nhưng đôi khi bộn bề với cuộc sống, cơm áo gạo tiền và những nỗi lo không đặt hết tên chúng ta quên mất đi sự tồn tại của nó. Nó là “tuổi thơ”. Câu chuyện xoay quanh nhân vật Thiều - một học sinh lớp 7 sống ở vùng quê nghèo cùng với người em trai tên tường, là một cậu bé dễ thương, hiền lành, rất yêu mến anh trai và rất thích chơi đùa cùng các loài động vật, lại say mê những câu chuyện cổ tích, đặc biệt là Cóc Tía. Thiều lại là một người hướng ngoại, tinh quái, nhiều lần khiến em mình chịu những tai họa nhưng lại rất thương em. Về gần cuối câu chuyện Thiều thích một cô gái cùng lớp nhưng lại lớn hơn mình một tuổi tên là Mận. Mận xinh xắn lại ngây thơ nhưng lại học không được tốt do chăm sóc người cha mắc bệnh phong bị mẹ giam trên gác nhà. Lại một nhân vật khác tên Đàn, chú Đàn là em trai của ba Thiều, bị mất một cánh tay do tai nạn nhưng vẫn yêu đời và thường kể chuyện cho hai anh em Thiều, Tường nghe. Nỗi muộn phiền duy nhất do ở chuyện tình trắc trở do cánh tay cụt gây ra. Chú đang yêu chị Vinh – một cô gái cùng xóm, lại là con gái thầy chủ nhiệm lớp Thiều, người thầy mà lúc nào Thiều cũng sợ chết khiếp. Nhiều chuyện liên tiếp xảy ra. Phải kể đến chính là khi căn gác nhà Mận bị bốc cháy. Mận suy sụp hoàn toàn bởi chịu cú sốc lớn gia đình Thiều đã giúp đỡ Mận trong lúc khó khăn nhất và đưa cô bé về ở chung với mình. Về sau, và sau khi chú Đàn và chị Vinh cùng dắt nhau bỏ trốn vì không nhận được sự chấp thuận của hai gia đình cùng với những tai họa khác nhau mà Thiều đã gây ra cho Tường.
+                    </div> -->
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

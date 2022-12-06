@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+    <style>
+        table {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>
+            <h1>Mã hóa và giải mã</h1>
+        </caption>
+        <tbody>
+            <tr>
+                <td>Nhập ký tự: </td>
+                <td><input type="text" id="input"></td>
+            </tr>
+            <tr>
+                <td>Nhập n: </td>
+                <td><input type="text" id="index"></td>
+            </tr>
+            <tr>
+                <td>Kết quả: </td>
+                <td><input type="text" id="result"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="maHoa()">Mã hóa</button>
+                    <button onclick="giaiMa()">Giải mã</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+        function maHoa() {
+            let input = document.getElementById('input').value;
+            let index = parseInt(document.getElementById('index').value);
+            let result = document.getElementById('result');
+            let ind = (arr.indexOf(input) + index) % 26;
+            result.value = arr[ind];
+        }
+        function giaiMa() {
+            let input = document.getElementById('input').value;
+            let index = parseInt(document.getElementById('index').value);
+            let result = document.getElementById('result');
+            let ind = (arr.indexOf(input) + 26 - index) % 26;
+            result.value = arr[ind];
+        }
+    </script>
+</body>
+
+</html>

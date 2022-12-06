@@ -1,0 +1,96 @@
+* {
+    padding; 0;
+    margin: 0;
+}
+
+#container {
+    width: 1000px;
+    font-family: sans-serif;
+    margin: 0 auto;   
+}
+
+header img {
+    width: 1000px;
+    height: 100px;
+}
+
+#giua {
+    margin-top: 40px;
+    display: flex;
+}
+nav ul {
+    width: 200px;
+    padding: 0;
+}
+nav ul li {
+    background-color: rgb(137, 238, 137);
+    height: 45px;
+    border-bottom: 2px solid white;
+    list-style: none;
+    line-height: 45px;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding-left: 15px;
+    font-size: 15px
+}
+nav ul li:hover {
+    background-color: goldenrod;
+}
+nav ul #cha {
+    position: relative;
+}
+nav ul #cha #con {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 200px;
+    top: 0;
+    display: none;
+}
+nav ul #cha #con li {
+    background-color: bisque;
+}
+nav ul #cha:hover #con {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+}
+section #sieuthi {
+    width: 200px;
+    margin-left: 30px;
+}
+section #sieuthi ul li {
+    line-height: 40px;
+}
+#to {
+    width: 600px;
+    margin-left: 30px;
+}
+#to .be {
+    display: flex;
+    margin-top: 30px;
+}
+#to .be img {
+    width: 100px;
+    height: 150px;
+}
+#to .be p {
+    width: 400px;
+    padding-left: 20px;
+}
+
+footer {
+    height: 40px;
+    background-color: rgb(17, 17, 71);
+    margin-top: 30px;
+}
+footer h3 {
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}

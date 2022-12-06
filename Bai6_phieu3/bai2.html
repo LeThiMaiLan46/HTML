@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bài 2 - phiếu số 3</title>
+    </head>
+    <body>
+            <h3>JavaScript có thể kiểm soát form</h3>
+            <p>Hãy nhập số vào hộp text (từ 1 đến 10):</p>
+            <input id="numb">
+            <button type="button" onclick="myFunction()"> Submit </button>
+            <p id="thongbao"></p>
+            <script>
+            function myFunction() {
+                var x, text;
+                // Nhận giá trị từ hộp text với id="numb"
+                x = document.getElementById("numb").value;
+                // Nếu x không phải là số và không trong khoảng từ 1 đến 10
+                if (isNaN(x) || x < 1 || x > 10) {
+                    text = "Dữ liệu không đúng";
+                } else {
+                    text = "Dữ liệu đúng";
+                }
+                document.getElementById("thongbao").innerHTML = text;
+            }
+            </script>
+            
+    </body>
+</html>

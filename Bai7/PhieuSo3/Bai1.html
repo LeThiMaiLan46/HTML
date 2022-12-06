@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #app {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .color {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+        }
+
+        .color.red {
+            background-color: red;
+        }
+
+        .color.blue {
+            background-color: blue;
+        }
+
+        .color.green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Mouse over the squares and the background color will change</h1>
+        <div class="color red" onmouseover="onMouseOver(1)" onmouseout="onMouseOut()"></div>
+        <div class="color blue" onmouseover="onMouseOver(2)" onmouseout="onMouseOut()"></div>
+        <div class="color green" onmouseover="onMouseOver(3)" onmouseout="onMouseOut()"></div>
+    </div>
+    <script>
+        const app = document.getElementById('app');
+        function onMouseOver(num) {
+            let color = 0;
+            switch (num) {
+                case 1:
+                    color = 'red';
+                    break;
+                case 2:
+                    color = 'blue';
+                    break;
+                case 3:
+                    color = 'green';
+                    break;
+            }
+            app.style.backgroundColor = color;
+        }
+        function onMouseOut() {
+            app.style.backgroundColor = 'white';
+        }
+
+    </script>
+</body>
+
+</html>

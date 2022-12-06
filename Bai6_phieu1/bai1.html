@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bài 1 - phiếu số 1</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            ul {
+                width: 350px;
+                background-color: rgb(163, 117, 205);
+                list-style: none;
+            }
+            ul li {
+                height: 35px;
+                display: flex;
+                line-height: 40px;
+                border: 1px solid rgb(241, 245, 129);
+                color:bisque;
+                font-size: 17px;
+                margin-top: 2px;
+            }
+            ul li div {
+                height: 22px;
+                width: 200px;
+                margin-left: 10px;
+                margin-top: 8px;
+                background-color: white;
+            }
+            ul li div p {
+                color: black;
+                line-height: 22px;
+            }
+            ul li input {
+                height: 20px;
+                width: 200px;
+                margin-left: 30px;
+                margin-top: 8px;
+            }
+            ul #nut {
+                justify-content: space-around;
+            }
+            ul #nut button {
+                height: 30px;
+                width: 80px;
+                margin-top: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Chương trình tra tuổi:</li>
+            <li>
+                <p>Tuổi dương lịch:</p>
+                <div><p id="xuat"></p></div>
+            </li>
+            <li>
+                <p>Tuổi âm lịch:</p>
+                <input type="text" id="nhap">
+            </li>
+            <li id="nut">
+                <button>Xóa</button>
+                <button onclick="xuatTuoi()">Tra cứu</button>
+            </li>
+            <script>
+                function tuoiAmDuong(am, duong) {
+                    this.tuoiAm = am;
+                    this.tuoiDuong = duong;
+                }
+                var tuoi = new Array();
+                tuoi[0] = new tuoiAmDuong("Canh", "Thân");
+                tuoi[1] = new tuoiAmDuong("Tân", "Dậu");
+                tuoi[2] = new tuoiAmDuong("Nhâm", "Tuất");
+                tuoi[3] = new tuoiAmDuong("Quí", "Hợi");
+                tuoi[4] = new tuoiAmDuong("Giáp", "Tý");
+                tuoi[5] = new tuoiAmDuong("Ất", "Sửu");
+                tuoi[6] = new tuoiAmDuong("Bính", "Dần");
+                tuoi[7] = new tuoiAmDuong("Đinh", "Mão");
+                tuoi[8] = new tuoiAmDuong("Mậu", "Thìn");
+                tuoi[9] = new tuoiAmDuong("Kỷ", "Tỵ");
+                tuoi[10] = new tuoiAmDuong("Kỷ", "Ngọ");
+                tuoi[11] = new tuoiAmDuong("Kỷ", "Mùi");
+                function xuatTuoi() {
+                    for(var index=0; index<12; index++) {
+                    if(document.getElementById("nhap").value == tuoi[index].tuoiAm) {
+                        document.getElementById("xuat") = tuoi[index].tuoiDuong;
+                    }
+                }
+                }
+            </script>
+        </ul>
+    </body>
+</html>
